@@ -1,0 +1,28 @@
+﻿@model MVCDemoApp.Models.Restaurant
+
+@{
+    ViewBag.Title = "Details";
+}
+
+@section mostfooter{
+
+    <h3>I am most footer defined on top !!
+    
+    
+    </h3>
+
+    @DateTime.Now.ToLongTimeString()
+
+                }
+
+<h2>Details</h2>
+
+<div>
+    <h4>Restaurant</h4>
+    <hr />
+    @Html.Partial("_RestDetails", Model)
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
